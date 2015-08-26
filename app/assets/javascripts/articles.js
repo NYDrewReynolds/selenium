@@ -3,7 +3,7 @@
  [X] $.post
  [X] Create actions
  [X] Response
- Add new comment to the UI
+ [ ] Add new comment to the UI
  */
 
 function submitComment(event) {
@@ -23,7 +23,9 @@ function commentData() {
 }
 
 function postCommentData() {
-    $.post("/comments", commentData());
+    $.post("/comments", commentData(), function(data){
+        console.log(data);
+    });
 }
 
 $(document).ready(function () {
