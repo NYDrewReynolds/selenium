@@ -26,6 +26,7 @@ function postCommentData() {
     $.post("/comments", commentData(), function(data){
         $("#comments").append(data);
     });
+    $("#new_comment")[0].reset();
 }
 
 $(document).ready(function () {
