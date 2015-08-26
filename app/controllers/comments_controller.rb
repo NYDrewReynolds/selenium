@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     article = Article.find(params[:comment][:article_id])
     comment = article.comments.create(comment_params)
 
-    render partial: "articles/comment", local: {comment: comment, article: @article}
+    render partial: "articles/comment", locals: {comment: comment, article: article}
   end
 
   private
